@@ -1,0 +1,21 @@
+header h3 {
+  color: rebeccapurple;
+}
+
+header i {
+  color: rebeccapurple;
+  position: relative;
+}
+
+.basket {
+  border: 1px solid blue;
+  position: absolute;
+  right: 220px;
+  display: block;
+}
+
+.basket ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}

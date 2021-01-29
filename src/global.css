@@ -1,0 +1,23 @@
+.game-list {
+  margin-top: 40px;
+}
+
+.game-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.game-list li {
+  width: 200px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.game-list li img {
+  width: 150px;
+  height: 150px;
+}
