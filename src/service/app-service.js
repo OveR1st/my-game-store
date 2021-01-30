@@ -29,9 +29,8 @@ export default class AppService {
       discount: product.discount,
       created: product.created_at,
       updated: product.updated_at,
-      // deleted: deleted_at
+      deleted: deleted_at
     }
   }
-
 
 }

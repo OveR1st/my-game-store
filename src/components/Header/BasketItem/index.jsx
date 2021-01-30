@@ -1,4 +1,5 @@
 import './index.css';
+
 export const BasketItem = ({ name, currPrice, src, delFromBasket }) => {
   return(
     <div>

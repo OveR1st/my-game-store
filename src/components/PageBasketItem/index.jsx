@@ -1,4 +1,5 @@
 import './index.css';
+
 export const PageBasketItem = ({ name, currPrice, src, minusFromBasket, count, plusFromBasket, delFromBasket, onItemSelected, setShowBasketGame }) => {
   const reviewGame = () => {
     onItemSelected()

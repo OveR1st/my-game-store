@@ -8,14 +8,12 @@ header h3 {
 }
 
 header i {
-  /* color: rebeccapurple; */
   position: relative;
 }
 
 .basket {
   position: absolute;
   border-radius: 3%;
-  /* right: 220px; */
   display: block;
   background-color: mediumaquamarine;
 }
@@ -26,10 +24,6 @@ header i {
 
 .btn:hover {
   color: white
-}
-
-.basketContainer span {
-  /* color: blueviolet */
 }
 
 .badge {
