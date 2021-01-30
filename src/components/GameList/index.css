@@ -1,0 +1,23 @@
+.search-filter {
+  margin-bottom: 21px;
+}
+
+.search-filter .btn {
+  margin-left: -1px;
+}
+
+.game-list ul li {
+  border-radius: 5%;
+  /* box-shadow: 0 0 10px rgb(0 0 0 / 50%); */
+  transition: all .5s;
+}
+.game-list ul li:hover {
+  transform: scale(1.1);
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+}
+
+.game-list ul li img {
+  cursor: pointer;
+}
+

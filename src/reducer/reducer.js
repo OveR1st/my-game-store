@@ -3,14 +3,14 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 let initialState = {
   games: [
-    {name: 'Prince Persia', categories: 'Action', price: 1500, currPrice: 1500, count: 1, src: 'https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwd01ab4a1/images/large/5efc463f0d253c1d3430ff98.jpg?sw=341&sh=450&sm=fit'},
-    {name: 'Metro Exodus', categories: 'Action', price: 1200, currPrice: 1200, count: 1, src: 'https://cdn.cloudflare.steamstatic.com/steam/apps/412020/capsule_616x353.jpg?t=1600359844'},
-    {name: 'Hitman 3', categories: 'Stealth', price: 2500, currPrice: 2500, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/4/4b/Hitman_3_Packart.jpg'},
-    {name: 'Stronghold', categories: 'Strategy', price: 210, currPrice: 210, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/6/62/Strongholdcover.jpg'},
-    {name: 'Oblivion', categories: 'RPG', price: 560, count: 1, currPrice: 560, src: 'https://i.playground.ru/e/pxmWb6GiPJCuvjtcJGvz1g.jpeg?600xauto'},
-    {name: 'Skyrim', categories: 'RPG', price: 620, count: 1, currPrice: 620, src: 'https://cdn.dlcompare.com/game_tetiere/img/elderscrolls5skyrim_img4.jpg'},
-    {name: 'Казаки 3', categories: 'Strategy', price: 400, currPrice: 400, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/0/08/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BA%D0%B8_3.jpg'},
-    {name: 'Blacklist', categories: 'Stealth', price: 550, currPrice: 550, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/4/4e/Splinter_Cell_Blacklist_PC.jpeg'}
+    {name: 'Prince Persia', categories: 'Action', price: 45, currPrice: 45, count: 1, src: 'https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwd01ab4a1/images/large/5efc463f0d253c1d3430ff98.jpg?sw=341&sh=450&sm=fit'},
+    {name: 'Metro Exodus', categories: 'Action', price: 125, currPrice: 125, count: 1, src: 'https://cdn.cloudflare.steamstatic.com/steam/apps/412020/capsule_616x353.jpg?t=1600359844'},
+    {name: 'Hitman 3', categories: 'Stealth', price: 160, currPrice: 160, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/4/4b/Hitman_3_Packart.jpg'},
+    {name: 'Stronghold', categories: 'Strategy', price: 13, currPrice: 13, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/6/62/Strongholdcover.jpg'},
+    {name: 'Oblivion', categories: 'RPG', price: 20, currPrice: 20, count: 1, src: 'https://i.playground.ru/e/pxmWb6GiPJCuvjtcJGvz1g.jpeg?600xauto'},
+    {name: 'Skyrim', categories: 'RPG', price: 35, currPrice: 35, count: 1, src: 'https://cdn.dlcompare.com/game_tetiere/img/elderscrolls5skyrim_img4.jpg'},
+    {name: 'Казаки 3', categories: 'Strategy', price: 16, currPrice: 16, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/0/08/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BA%D0%B8_3.jpg'},
+    {name: 'Blacklist', categories: 'Stealth', price: 25, currPrice: 25, count: 1, src: 'https://upload.wikimedia.org/wikipedia/ru/4/4e/Splinter_Cell_Blacklist_PC.jpeg'}
   ],
   basket: [],
   totalPrice: 0

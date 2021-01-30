@@ -47,10 +47,10 @@ const Header = ({basket, totalPrice, delFromBasket, delAllBasket, inPurchase, se
   }
    
   return(
-    <header className="d-flex justify-content-between">
+    <header className="d-flex justify-content-between pt-2">
         <h3>GAME-STORE</h3>
         <div className="basketContainer">
-          <button onClick={VisibleBasket}>
+          <button type="button" className="btnBasket btn btn-outline-success" onClick={VisibleBasket}>
             <i className="fa fa-shopping-basket" aria-hidden="true"></i>
             <span className="badge badge-primary badge-pill">{basket.length}</span>
           </button>
@@ -58,12 +58,14 @@ const Header = ({basket, totalPrice, delFromBasket, delAllBasket, inPurchase, se
             <ul className="list-group">
               {basketElements}
             </ul>
-            <div>
-              Итого: {totalPrice}
+            {basket.length !== 0 && <div className="text-center">
+              Total: {totalPrice}$
+            </div>}
+            <div className="d-flex justify-content-center mb-3">
+              {basket.length !== 0 && <NavLink to="/api/purchase"><button className="btn btn-success me-3" onClick={() => setInPurchase(true)}>Buy</button></NavLink>}
+              {basket.length !== 0 && <button className="btn btn-danger" onClick={() => delAllBasket()}>ClearBasket</button>}
             </div>
-            {basket.length !== 0 && <NavLink to="/api/purchase"><button onClick={() => setInPurchase(true)}>Сделать заказ</button></NavLink>}
-            {basket.length !== 0 && <button className="btn btn-danger" onClick={() => delAllBasket()}>ClearBasket</button>}
-            {basket.length === 0 && <span>Cart empty</span>}
+            {basket.length === 0 && <span>You'r cart empty</span>}
           </div> }
         </div>
       </header>

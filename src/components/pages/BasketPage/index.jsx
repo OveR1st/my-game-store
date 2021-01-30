@@ -37,15 +37,15 @@ const BasketPage = ({ basket, minusFromBasket, plusFromBasket, delFromBasket, de
   })
   
   return(
-    <div>
+    <div className="row">
       <Header inPurchase={inPurchase} setInPurchase={setInPurchase} setShowBasketGame={setShowBasketGame}/>
-      <div className="basketPageUl">
+      <div className="basketPageUl col-5">
         <ul className="list-group">
           {basketElements}
         </ul>
         {basket.length === 0 && <img className="emptyBasket" src="https://thebigray.ru/images/empty-cart.png" alt="img"/>}
-        {basket.length !== 0 && <div><div>{totalPrice}$</div> <button className="btn btn-success">Purchase</button></div>}
-        {basket.length !== 0 && <button onClick={() => delAllBasket()} className="btn btn-danger">ClearBasket</button>}
+        {basket.length !== 0 && <div className="d-flex justify-content-end"><div className="me-3">Total: {totalPrice}$</div> <button className="btn btn-success">Purchase</button></div>}
+        {basket.length !== 0 && <button onClick={() => delAllBasket()} className="btn btn-danger me-4">ClearBasket</button>}
         <button onClick={trueReturn}className="btn btn-primary">Back</button>
       </div>
     </div>

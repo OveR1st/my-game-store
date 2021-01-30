@@ -23,19 +23,31 @@ const GamePage = ({games, basket, id, addToBasket, inPurchase, setInPurchase, sh
     return(
       <div> 
         <Header inPurchase={inPurchase} setInPurchase={setInPurchase} setShowBasketGame={setShowBasketGame}/>
-          <div className="d-flex">
-            <div className="gameImg">
+          <div className="d-flex row">
+            <div className="gameImg col-3">
               <img src={game.src} alt=""/>
             </div>
-            <div>
+            <div className="col-6">
               <div>name: {game.name}</div>
-              <div>categories: {game.categories}</div>
-              <span>Lorem ipsum dolor sit amet consectetur,
+              <div className="mt-2 mb-1">categories: {game.categories}</div>
+              <p className="mb-2">Lorem ipsum dolor sit amet consectetur,
                  adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
                 dignissimos laborum nulla culpa aspernatur autem placeat
                  sequi? Ratione facilis quasi quos cupiditate!
-              </span>
-              <div>price: {game.price}</div>
+                 Lorem ipsum dolor sit amet consectetur,
+                 adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
+                dignissimos laborum nulla culpa aspernatur autem placeat
+                 sequi? Ratione facilis quasi quos cupiditate!
+                 Lorem ipsum dolor sit amet consectetur,
+                 adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
+                dignissimos laborum nulla culpa aspernatur autem placeat
+                 sequi? Ratione facilis quasi quos cupiditate!
+                 Lorem ipsum dolor sit amet consectetur,
+                 adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
+                dignissimos laborum nulla culpa aspernatur autem placeat
+                 sequi? Ratione facilis quasi quos cupiditate!
+              </p>
+              <div>price: {game.price}$</div>
               <button onClick={goBack}className="btn btn-primary">Back</button>
             </div>
           </div>
@@ -48,23 +60,37 @@ const GamePage = ({games, basket, id, addToBasket, inPurchase, setInPurchase, sh
   return(
     <div> 
       <Header inPurchase={inPurchase} setInPurchase={setInPurchase}/>
-        <div className="d-flex">
-          <div className="gameImg">
+        <div className="d-flex row">
+          <div className="gameImg col-3">
             <img src={game.src} alt=""/>
           </div>
-          <div>
+          <div className="col-6">
             <div>name: {game.name}</div>
-            <div>categories: {game.categories}</div>
-            <span>Lorem ipsum dolor sit amet consectetur,
+            <div className="mt-2 mb-1">categories: {game.categories}</div>
+            <p className="mb-2">Lorem ipsum dolor sit amet consectetur,
                adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
               dignissimos laborum nulla culpa aspernatur autem placeat
                sequi? Ratione facilis quasi quos cupiditate!
-            </span>
-            <div>price: {game.price}</div>
-            <button onClick={() => history.goBack()}className="btn btn-primary">Back</button>
-            <button onClick={() => addToBasket(id)}type="button" className="btn btn-outline-success">
+               Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
+              dignissimos laborum nulla culpa aspernatur autem placeat
+               sequi? Ratione facilis quasi quos cupiditate!
+               Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
+              dignissimos laborum nulla culpa aspernatur autem placeat
+               sequi? Ratione facilis quasi quos cupiditate!
+               Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Fuga, perferendis dolore earum eaque quasi numquam iusto veniam
+              dignissimos laborum nulla culpa aspernatur autem placeat
+               sequi? Ratione facilis quasi quos cupiditate!
+            </p>
+            <div>price: {game.price}$</div>
+            <div>
+              <button onClick={() => history.goBack()}className="btn btn-primary me-3">Back</button>
+              <button onClick={() => addToBasket(id)}type="button" className="btn btn-outline-success">
               <i className="fa fa-shopping-basket" aria-hidden="true"></i>
             </button>
+            </div>
           </div>
         </div>
     </div>    

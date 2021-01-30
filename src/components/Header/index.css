@@ -1,21 +1,46 @@
+hr {
+  background-color: #6610f2;
+  opacity: 1;
+}
+
 header h3 {
   color: rebeccapurple;
 }
 
 header i {
-  color: rebeccapurple;
+  /* color: rebeccapurple; */
   position: relative;
 }
 
 .basket {
-  border: 1px solid blue;
   position: absolute;
-  right: 220px;
+  border-radius: 3%;
+  /* right: 220px; */
   display: block;
+  background-color: mediumaquamarine;
 }
 
-.basket ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+.basket li {
+    background-color: burlywood;
+}
+
+.btn:hover {
+  color: white
+}
+
+.basketContainer span {
+  /* color: blueviolet */
+}
+
+.badge {
+  color: #198754;
+}
+
+.btnBasket:hover .badge {
+  color: white;
+}
+
+.basket .btn-danger {
+  margin-bottom: 21px;
+  margin-right: 22px;
 }

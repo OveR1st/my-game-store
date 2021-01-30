@@ -5,6 +5,8 @@ import { Search } from "../Search";
 import { GameItem } from "./GameItem";
 import { filterAction, filterStealth, filterRpg, filterAll, addToBasket } from '../../actions/actions';
 
+import './index.css';
+
 const GameList = ({ games, all, action, stealth, rpg, addToBasket, onItemSelected }) => {
   const gameElements = games.map(({_id, name, categories, price, src}, id) => {
    return(
