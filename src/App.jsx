@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/api/products" exact render={()=>(
           <HomePage inPurchase={inPurchase} setInPurchase={setInPurchase} setShowBasketGame={setShowBasketGame}/>
         )} />
-        <Route path="/api/purchase" exact render={()=>(
+        {/* <Route path="/api/purchase" exact render={()=>(
           <BasketPage inPurchase={inPurchase} setInPurchase={setInPurchase} setShowBasketGame={setShowBasketGame} />
         )} />
         <Route path="/api/products/:id" 
@@ -28,7 +28,7 @@ const App = () => {
             const {id} = match.params;
             return <GamePage id={id} inPurchase={inPurchase} setInPurchase={setInPurchase} showBasketGame={showBasketGame} setShowBasketGame={setShowBasketGame}/> 
           }}/>
-        <Route path="*"><span className="align-content-center">404 Page not found</span></Route>
+        <Route path="*"><span className="align-content-center">404 Page not found</span></Route> */}
         </Switch>
       </Router>
     </div>

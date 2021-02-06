@@ -3,20 +3,26 @@ import { connect } from 'react-redux';
 
 import { Search } from "../Search";
 import { GameItem } from "./GameItem";
-import { filterAction, filterStealth, filterRpg, filterAll, addToBasket } from '../../actions/actions';
+import { filterAction, filterStealth, filterRpg, filterAll, addToBasket, objectsFetchData } from '../../actions/actions';
 
 import './index.css';
+import { useEffect } from 'react';
 
-const GameList = ({ games, all, action, stealth, rpg, addToBasket, onItemSelected }) => {
-  const gameElements = games.map(({_id, name, categories, price, src}, id) => {
+const GameList = ({ fetchData, objects=[], all, action, stealth, rpg, addToBasket, onItemSelected }) => {
+  useEffect(()=>{
+    fetchData()
+  }, []);
+  
+  const gameElements = objects.map(({ name, img_url, category, price }, id) => {
+    debugger
    return(
       <li key={id}>
         <GameItem
           id={id} 
           name={name}
-          categories={categories}
+          category={category}
           price={price}
-          src={src}
+          img_url={img_url}
           addToBasket={() => addToBasket(id)}
           onItemSelected={onItemSelected}/>
       </li>
@@ -37,12 +43,14 @@ const GameList = ({ games, all, action, stealth, rpg, addToBasket, onItemSelecte
   );
 }
 
-const mapStateToProps = ({games}) => {
-  return {games}
+const mapStateToProps = ({objects}) => {
+  debugger
+  return { objects }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
+    fetchData: objectsFetchData,
     all: filterAll,
     action: filterAction,
     stealth: filterStealth,

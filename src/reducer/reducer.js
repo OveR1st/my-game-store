@@ -70,8 +70,24 @@ const updateItem = (newCurrentGame, basket, id) => {
   ]
 }
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = [], action) => {
+  debugger
   switch (action.type) {
+    case "GET_API_OBJECTS" :
+     let newArray = action.objects.map(obj => {
+       return {
+         ...obj,
+         count: 0,
+         currPrice: obj.price
+       }
+     })
+     
+      return {
+        ...state,
+        objects: newArray
+      }
+
+
     case 'FILTER_ALL':
       return {...initialState, basket: state.basket, totalPrice: state.totalPrice}
 

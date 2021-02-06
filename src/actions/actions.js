@@ -1,3 +1,52 @@
+import axios from 'axios'
+// const api = axios.create({
+//   baseURL: `http://167.172.186.154/api/products`
+// })
+
+// const fetchDataRequest = () => {
+//   return {
+//     type: "FETCH_USERS_REQUEST"
+//   }
+// }
+
+const objectsFetchDataSuccess = (objects) => {
+  return {
+    type: "GET_API_OBJECTS",
+    objects: objects
+  }
+}
+
+
+// получить объекты
+const objectsFetchData = () => {
+  debugger
+  return async (dispatch) => {
+    await axios.get('http://167.172.186.154/api/products')
+      .then(res =>{
+        const products = res.data
+        dispatch(objectsFetchDataSuccess(products))
+      })
+  }
+}
+// const objectsFetchData = (url) => {
+//   debugger
+//   return (dispatch) => {
+//     fetch(url)
+//       .then(res => {
+//         if(!res.ok) {
+//           throw new Error(res.statusText)
+//         }
+//         return res;
+//       })
+//       .then(res => res.json())
+//       .then(objects => dispatch(objectsFetchDataSuccess(objects))) 
+//   }
+// }
+
+
+
+
+
 const filterAction = () => {
   return {
     type: 'FILTER_ACTION'
@@ -66,5 +115,6 @@ export {
   delFromBasket,
   delAllBasket,
   minusFromBasket,
-  plusFromBasket
+  plusFromBasket,
+  objectsFetchData
 }
