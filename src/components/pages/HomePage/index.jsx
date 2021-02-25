@@ -3,16 +3,16 @@ import { withRouter } from "react-router-dom";
 import GameList from "../../GameList";
 import Header from "../../Header";
 
-import './index.css';
+import "./index.css";
 
 const HomePage = ({ history, inPurchase, setInPurchase }) => {
-  return(
+  return (
     <>
-      {/* <Header inPurchase={inPurchase} setInPurchase={setInPurchase}/> */}
+      <Header inPurchase={inPurchase} setInPurchase={setInPurchase} />
       <hr />
-      <GameList onItemSelected={(id) => history.push(`/api/products/${id}`)}/>
+      <GameList onItemSelected={(id) => history.push(`/api/products/${id}`)} />
     </>
   );
-}
+};
 
-export default withRouter(HomePage)
+export default withRouter(HomePage);

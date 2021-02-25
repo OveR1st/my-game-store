@@ -1,62 +1,76 @@
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
 import { Search } from "../Search";
 import { GameItem } from "./GameItem";
-import { filterAction, filterStealth, filterRpg, filterAll, addToBasket, objectsFetchData } from '../../actions/actions';
+import {
+  filterAction,
+  filterStealth,
+  filterRpg,
+  filterAll,
+  addToBasket,
+  objectsFetchData,
+} from "../../actions/actions";
 
-import './index.css';
-import { useEffect } from 'react';
+import "./index.css";
+import { useEffect } from "react";
 
-const GameList = ({ fetchData, objects=[], all, action, stealth, rpg, addToBasket, onItemSelected }) => {
-  useEffect(()=>{
-    fetchData()
-  }, []);
-  
-  const gameElements = objects.map(({ name, img_url, category, price }, id) => {
-    debugger
-   return(
+const GameList = ({
+  fetchData,
+  games,
+  all,
+  action,
+  stealth,
+  rpg,
+  addToBasket,
+  onItemSelected,
+}) => {
+  // useEffect(()=>{
+  //   fetchData()
+  // }, []);
+
+  const gameElements = games.map(({ name, categories, price, src }, id) => {
+    debugger;
+    return (
       <li key={id}>
         <GameItem
-          id={id} 
+          id={id}
           name={name}
-          category={category}
+          categories={categories}
           price={price}
-          img_url={img_url}
+          src={src}
           addToBasket={() => addToBasket(id)}
-          onItemSelected={onItemSelected}/>
+          onItemSelected={onItemSelected}
+        />
       </li>
-   );
-  })
-  
-  return(
-    <div className='game-list'>
-      <Search
-        all={all}
-        action={action}
-        stealth={stealth}
-        rpg={rpg}/>
-        <ul>
-          {gameElements}
-        </ul>
-      </div>
-  );
-}
+    );
+  });
 
-const mapStateToProps = ({objects}) => {
-  debugger
-  return { objects }
-}
+  return (
+    <div className="game-list">
+      <Search all={all} action={action} stealth={stealth} rpg={rpg} />
+      <ul>{gameElements}</ul>
+    </div>
+  );
+};
+
+const mapStateToProps = ({ games }) => {
+  debugger;
+  return { games };
+};
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    fetchData: objectsFetchData,
-    all: filterAll,
-    action: filterAction,
-    stealth: filterStealth,
-    rpg: filterRpg,
-    addToBasket: addToBasket
-  }, dispatch);
-}
+  return bindActionCreators(
+    {
+      // fetchData: objectsFetchData,
+      all: filterAll,
+      action: filterAction,
+      stealth: filterStealth,
+      rpg: filterRpg,
+      addToBasket: addToBasket,
+    },
+    dispatch
+  );
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(GameList)
+export default connect(mapStateToProps, mapDispatchToProps)(GameList);
